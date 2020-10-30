@@ -7,11 +7,9 @@ module PostHelper
 
   def custom_timeline
     all_posts = []
-    
+
     Post.all.each do |post|
-      if current_user.friends.include?(post.user) || current_user.id == post.user_id
-      all_posts << post
-      end
+      all_posts << post if current_user.friends.include?(post.user) || current_user.id == post.user_id
     end
 
     all_posts.sort_by(&:created_at)
