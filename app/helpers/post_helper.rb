@@ -6,22 +6,14 @@ module PostHelper
   end
 
   def custom_timeline
-    friends = current_user.friends
-    friends_posts = []
-    if friends.empty?
-      friends_posts << current_user.posts
-    else
-      friends.each do |friend|
-        user_finder = User.find(friend.id)
-        friends_posts << user_finder.posts + current_user.posts
+    all_posts = []
+    
+    Post.all.each do |post|
+      if current_user.friends.include?(post.user) || current_user.id == post.user_id
+      all_posts << post
       end
     end
-    friends_posts
-  end
 
-  def sorted_custom_timeline
-    custom_timeline.each do |post|
-      post.sort_by(&:created_at).reverse!
-    end
+    all_posts.sort_by(&:created_at)
   end
 end
