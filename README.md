@@ -62,6 +62,9 @@ Open `http://localhost:3000/` in your browser.
 ```
     rpsec --format documentation
 ```
+```
+    bundle exec rspec
+```
 
 > Tests will be added by Microverse students. There are no tests for initial features in order to make sure that students write all tests from scratch.
 
@@ -69,9 +72,19 @@ Open `http://localhost:3000/` in your browser.
 
 TBA
 
-## Authors
+## ✒️ Authors
 
 TBA
+
+👤 **Stanley Enow Lekunze**
+
+- Github: [@happiguru](https://github.com/happiguru)
+- LinkedIn:[LinkedIn](https://www.linkedin.com/in/lekunze-nley)
+
+👤 **Miguel Uzcátegui**
+
+- Github: [@Miguelus373](https://github.com/Miguelus373)
+- LinkedIn:[LinkedIn](https://www.linkedin.com/in/)
 
 ## 🤝 Contributing
 
