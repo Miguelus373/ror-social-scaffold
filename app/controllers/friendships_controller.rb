@@ -18,11 +18,9 @@ class FriendshipsController < ApplicationController
 
   def update
     @friendship = Friendship.find(params[:id])
-    @friendship.confirmed = true
-    @inverse_friendship = Friendship.create(friend_id: @friendship.user_id,
-                                            user_id: @friendship.friend_id,
-                                            confirmed: true)
-    if @inverse_friendship.save && @friendship.save
+    @friendship.confirm_friend
+
+    if @friendship.save
       redirect_to users_path, notice: 'Friend request was accepted.'
     else
       redirect_to users_path, alert: "Couldn't accept friend request"
