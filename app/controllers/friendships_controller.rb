@@ -1,13 +1,10 @@
 class FriendshipsController < ApplicationController
-  # before_action :set_friendship, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
-  # GET /friendships
 
   def new
     @friendship_created = current_user.friendships.build
   end
 
-  # POST /friendships
   def create
     @friendship_created = current_user.friendships.build
     @friendship_created.friend_id = params[:user_id]
@@ -43,12 +40,6 @@ class FriendshipsController < ApplicationController
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
-  # def set_friendship
-  #   @friendship = Friendship.find(params[:id])
-  # end
-
-  # Only allow a list of trusted parameters through.
   def friendship_params
     params.require(:friendships).permit(:friend_id, :user_id)
   end
