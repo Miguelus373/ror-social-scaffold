@@ -1,11 +1,14 @@
 require 'rails_helper'
 
 RSpec.describe 'LoginTests', type: :request do
-  scenario 'invalid login input' do
+  let(:user) { User.create(name: 'hello', email: 'hello@hello.com', password: '123456') }
+
+  scenario 'valid login input' do
     visit new_user_session_path
-    fill_in 'Email', with: 'hello@hello.com'
-    fill_in 'Password', with: '123456'
+    fill_in 'Email', with: user.email
+    fill_in 'Password', with: user.password
     click_on 'Log in'
-    expect(page).to have_content('Invalid Email or password.')
+    visit root_path
+    expect(page).to have_content(user.name)
   end
 end
