@@ -15,15 +15,16 @@ module UsersHelper
   end
 
   def friendship_status(user, current_user)
-    return unless user.friendship_requested?(current_user)
+    if user.friendship_requested?(current_user)
 
-    raw("<a> &nbsp &nbsp Accept Friend Request:</a>
+      raw("<a> &nbsp &nbsp Accept Friend Request:</a>
             <span class='profile-link'>
                 #{link_to 'Accept', friendship_path(request), method: :patch, class: 'profile-link'} |
                 #{link_to 'Reject', friendship_path(request), method: :delete,
                                                               data: { confirm: 'Are you sure?' }, class: 'profile-link'}
             </span>")
-    elseif current_user.friendship_requested?(user)
-    raw("Wait for #{user.name} to accept your friend request!")
+    elsif current_user.friendship_requested?(user)
+      raw("Wait for #{user.name} to accept your friend request!")
+    end
   end
 end
