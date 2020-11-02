@@ -1,6 +1,6 @@
-# Scaffold for social media app with Ruby on Rails
+# Social Media App with Ruby on Rails
 
-> This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
+> This repo includes intial code for social media app with basic styling.
 
 ## Built With
 
@@ -8,9 +8,7 @@
 - Ruby on Rails v5.2.4
 
 ## Live Demo
-
-TBA
-
+[View Live Demo](https://morning-woodland-04173.herokuapp.com/)
 
 ## Getting Started
 
@@ -57,6 +55,7 @@ Start server with:
 
 Open `http://localhost:3000/` in your browser.
 
+
 ### Run tests
 
 ```
@@ -66,15 +65,14 @@ Open `http://localhost:3000/` in your browser.
     bundle exec rspec
 ```
 
-> Tests will be added by Microverse students. There are no tests for initial features in order to make sure that students write all tests from scratch.
+> Unit and Integration Test has been implemented using RSpec and Capybara.
 
 ### Deployment
 
-TBA
+Deployed on Heroku through the [link](https://morning-woodland-04173.herokuapp.com/)
 
 ## ✒️ Authors
 
-TBA
 
 👤 **Stanley Enow Lekunze**
 
@@ -84,13 +82,13 @@ TBA
 👤 **Miguel Uzcátegui**
 
 - Github: [@Miguelus373](https://github.com/Miguelus373)
-- LinkedIn:[LinkedIn](https://www.linkedin.com/in/)
+- LinkedIn:[LinkedIn](https://www.linkedin.com/in/Miguelus373)
 
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](https://github.com/Miguelus373/ror-social-scaffold/issues).
 
 ## Show your support
 
@@ -98,9 +96,10 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-TBA
+- Microverse
+- GitHub
+- TheOdinProject
+- Ruby
 
 ## 📝 License
-
-TBA
-
+This project is [MIT](lic.url) licensed.
