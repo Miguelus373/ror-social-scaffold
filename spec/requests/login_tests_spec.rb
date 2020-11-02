@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "LoginTests", type: :request do
+RSpec.describe 'LoginTests', type: :request do
   scenario 'invalid login input' do
     visit new_user_session_path
     fill_in 'Email', with: 'hello@hello.com'

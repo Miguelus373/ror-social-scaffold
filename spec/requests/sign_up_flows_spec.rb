@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "SignUpFlows", type: :request do
+RSpec.describe 'SignUpFlows', type: :request do
   scenario 'valid signup input' do
     visit new_user_registration_path
     fill_in 'Name', with: 'hello'
