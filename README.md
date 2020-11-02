@@ -2,6 +2,10 @@
 
 > This repo includes intial code for social media app with basic styling.
 
+![](images/Screenshot_2020-11-03_01-48-04.png)
+
+![](images/Screenshot_2020-11-03_01-46-36.png)
+
 ## Built With
 
 - Ruby v2.7.0
